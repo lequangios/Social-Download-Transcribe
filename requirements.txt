@@ -1,0 +1,8 @@
+openai-whisper
+openai
+yt-dlp
+Flask
+certifi
+pydub
+ffprobe-python
+ffmpeg-python

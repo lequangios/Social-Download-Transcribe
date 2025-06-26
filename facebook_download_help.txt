@@ -1,0 +1,11 @@
+1 How To Build
+- python3 -m venv venv
+- source venv/bin/activate
+- pip3 install -r requirements.txt
+2 How To Use
+- Download Video : python facebook_downloader.py "https://www.facebook.com/watch?v=abc123"
+- Download Convert To MP3 : python facebook_downloader.py --url "https://www.facebook.com/watch?v=abc123" --audio-only
+- Download and Extract transcript with Whisper : python facebook_downloader.py --url "https://www.facebook.com/watch?v=abc123" --transcribe
+- Download private video with cookies: python facebook_downloader.py --url "..." --transcribe --cookies cookies.txt
+
+python facebook_downloader.py --url https://www.facebook.com/BINHMINHVIETBMV/videos/732471152555460 --transcribe

@@ -135,6 +135,10 @@ venv/
 ENV/
 env.bak/
 venv.bak/
+build/
+dist/
+file/
+audio/
 
 # Spyder project settings
 .spyderproject
