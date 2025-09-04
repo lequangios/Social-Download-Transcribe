@@ -12,6 +12,7 @@ build/
 develop-eggs/
 dist/
 downloads/
+prompt/
 eggs/
 .eggs/
 lib/
@@ -94,12 +95,6 @@ ipython_config.py
 #   install all needed dependencies.
 #Pipfile.lock
 
-# UV
-#   Similar to Pipfile.lock, it is generally recommended to include uv.lock in version control.
-#   This is especially recommended for binary packages to ensure reproducibility, and is more
-#   commonly ignored for libraries.
-#uv.lock
-
 # poetry
 #   Similar to Pipfile.lock, it is generally recommended to include poetry.lock in version control.
 #   This is especially recommended for binary packages to ensure reproducibility, and is more
@@ -112,10 +107,8 @@ ipython_config.py
 #pdm.lock
 #   pdm stores project-wide configurations in .pdm.toml, but it is recommended to not include it
 #   in version control.
-#   https://pdm.fming.dev/latest/usage/project/#working-with-version-control
+#   https://pdm.fming.dev/#use-with-ide
 .pdm.toml
-.pdm-python
-.pdm-build/
 
 # PEP 582; used by e.g. github.com/David-OConnor/pyflow and github.com/pdm-project/pdm
 __pypackages__/
@@ -135,10 +128,7 @@ venv/
 ENV/
 env.bak/
 venv.bak/
-build/
-dist/
-file/
-audio/
+venv.zip
 
 # Spyder project settings
 .spyderproject
@@ -166,33 +156,113 @@ cython_debug/
 
 # PyCharm
 #  JetBrains specific template is maintained in a separate JetBrains.gitignore that can
-#  be found at https://github.com/github/gitignore/blob/main/Global/JetBrains.gitignore
-#  and can be added to the global gitignore or merged into this file.  For a more nuclear
-#  option (not recommended) you can uncomment the following to ignore the entire idea folder.
-#.idea/
+#  be added to the global gitignore or merged into this project gitignore.  For a PyCharm
+#  project, it is recommended to include platform and tool-specific gitignore files
+#  under VCS, and distribute them as part of initial project setup.
+.idea/
 
-# Abstra
-# Abstra is an AI-powered process automation framework.
-# Ignore directories containing user credentials, local state, and settings.
-# Learn more at https://abstra.io/docs
-.abstra/
+# VS Code
+.vscode/
 
-# Visual Studio Code
-#  Visual Studio Code specific template is maintained in a separate VisualStudioCode.gitignore 
-#  that can be found at https://github.com/github/gitignore/blob/main/Global/VisualStudioCode.gitignore
-#  and can be added to the global gitignore or merged into this file. However, if you prefer, 
-#  you could uncomment the following to ignore the enitre vscode folder
-# .vscode/
+# Project-specific ignores
+# =====================
 
-# Ruff stuff:
-.ruff_cache/
+# Downloaded content - these files can be large and are output
+output/
+src/output/
+downloads/
 
-# PyPI configuration file
-.pypirc
+# Whisper model cache
+*.pt
 
-# Cursor
-#  Cursor is an AI-powered code editor. `.cursorignore` specifies files/directories to
-#  exclude from AI features like autocomplete and code analysis. Recommended for sensitive data
-#  refer to https://docs.cursor.com/context/ignore-files
-.cursorignore
-.cursorindexingignore
+# Audio/Video files
+*.mp4
+*.mp3
+*.wav
+*.avi
+*.mov
+*.mkv
+*.webm
+*.m4a
+*.aac
+*.flac
+*.ogg
+
+# Subtitle files
+*.srt
+*.vtt
+*.ass
+*.ssa
+
+# Transcript files (optional - remove if you want to track them)
+*.txt
+!requirements.txt
+!README.txt
+!*.md
+
+# Cookie files (security sensitive)
+cookies.txt
+*.cookies
+
+# Temporary files
+temp/
+tmp/
+temp_*
+*.tmp
+
+# Logs
+logs/
+*.log
+
+# macOS
+.DS_Store
+.AppleDouble
+.LSOverride
+
+# Windows
+Thumbs.db
+Thumbs.db:encryptable
+ehthumbs.db
+ehthumbs_vista.db
+*.stackdump
+[Dd]esktop.ini
+$RECYCLE.BIN/
+*.cab
+*.msi
+*.msix
+*.msm
+*.msp
+*.lnk
+
+# Linux
+*~
+
+# Backup files
+*.bak
+*.backup
+*.swp
+*.swo
+
+# IDE files
+*.sublime-project
+*.sublime-workspace
+
+# Configuration files with sensitive data
+config.json
+settings.json
+.env.local
+.env.production
+
+# Test files
+test_*
+*_test.py
+tests/
+
+# Documentation build
+docs/build/
+
+# FFmpeg binaries (if bundled)
+ffmpeg
+ffmpeg.exe
+ffprobe
+ffprobe.exe
