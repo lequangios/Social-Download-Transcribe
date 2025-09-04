@@ -13,6 +13,14 @@ develop-eggs/
 dist/
 downloads/
 prompt/
+
+# Resource files - track important assets but ignore temp files
+!resource/
+!resource/img/
+resource/*.tmp
+resource/temp_*
+resource/img/*.tmp
+resource/img/temp_*
 eggs/
 .eggs/
 lib/
@@ -32,6 +40,22 @@ MANIFEST
 #  before PyInstaller builds the exe, so as to inject date/other infos into it.
 *.manifest
 *.spec
+
+# Portable builds and executables
+SocialDownloader_Portable/
+SocialDownloader_Lightweight/
+SocialDownloader_Console/
+SocialDownloader_Directory/
+SocialDownloader
+SocialDownloader_Light
+SocialDownloader_Console
+SocialDownloader_Dir/
+*.app
+*.exe
+*.dmg
+*.pkg
+*.deb
+*.rpm
 
 # Installer logs
 pip-log.txt
@@ -258,6 +282,13 @@ test_*
 *_test.py
 tests/
 
+# Build scripts and temporary files
+build_portable.py
+build_options.py
+debug_*
+demo_*
+create_*
+
 # Documentation build
 docs/build/
 
@@ -266,3 +297,43 @@ ffmpeg
 ffmpeg.exe
 ffprobe
 ffprobe.exe
+
+# Sample and test media files
+*.mp3
+*.mp4
+*.wav
+*.avi
+*.mov
+*.mkv
+*.webm
+*.m4a
+*.aac
+*.flac
+*.ogg
+test_sample.*
+
+# URL test files
+test_urls.txt
+urls.txt
+batch_urls.txt
+
+# Old/backup GUI files
+*_old.py
+*_backup.py
+*_temp.py
+
+# Development and debugging files
+*.pyc
+*.pyo
+*.pyd
+__pycache__/
+*.so
+*.dylib
+*.dll
+
+# IDE and editor files
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
