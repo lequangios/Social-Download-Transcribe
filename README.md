@@ -6,6 +6,12 @@
 ![Python](https://img.shields.io/badge/Python-3.11+-green)
 ![AI](https://img.shields.io/badge/AI-OpenAI%20Whisper-orange)
 
+## 🖼️ Screenshot
+
+![Social Downloader GUI](app.png)
+
+*Giao diện chính của Social Downloader - Modern UI với logo, scrollable content, và real-time progress tracking*
+
 ## ✨ Tính năng chính
 
 🎯 **Multi-Platform Support**: Hỗ trợ YouTube, Facebook, TikTok, X/Twitter  
@@ -102,6 +108,8 @@ python video_downloader_gui.py
 ```
 
 ### 📋 Giao diện chính
+
+![GUI Interface](app.png)
 
 #### 1. **Header Section**
 - **Logo**: Hiển thị logo Social Downloader
